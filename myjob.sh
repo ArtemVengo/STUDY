@@ -1,11 +1,8 @@
+#!/bin/bash
 
-#!bin/bash
-
-timestamp=$(date +"%d-%m-%Y %H:%M:%S")
-
+umask=027
 while true
 do
-echo "$timestamp: Script alive and working" >> /var/log/myjob.log
-sleep 30
+echo "$(date +%d-%m-%Y %H:%M:%S) : Steal alive" >> /var/log/myjob/myjob.log
+sleep 20
 done
-

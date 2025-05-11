@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for servise starts alive count in myjob log
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

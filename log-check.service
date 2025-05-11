@@ -1,0 +1,11 @@
+[Unit]
+Description=Servis for count Alive in myjob log
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/log-check.sh
+User=logger
+
+
+[Install]
+WantedBy=default.target 

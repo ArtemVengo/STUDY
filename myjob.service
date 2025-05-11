@@ -1,13 +1,13 @@
-
 [Unit]
-Description=Study servise, loggining itself every 30 sec.
-After=multi-user.target
+Description=Myjob service
 
 [Service]
-ExecStart=/home/Vengo/Documents/STUDY/myjob.sh
-Restart=on-failure
-CPUQuta=20%
+ExecStart=/usr/local/bin/myjob.sh
+Restart=always
+CPUQuota=20%
 MemoryMax=100M
+StandardOutput=append:/var/log/myjob.log
+User=logger
 
 [Install]
 WantedBy=default.target
